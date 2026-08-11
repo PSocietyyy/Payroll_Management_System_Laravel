@@ -56,4 +56,9 @@ class Employee extends Model
     {
         return $this->hasMany(Organization::class, 'manager_id');
     }
+
+    public function employmentContracts()
+    {
+        return $this->hasMany(EmploymentContract::class);
+    }
 }
